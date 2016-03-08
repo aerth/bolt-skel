@@ -1,11 +1,19 @@
 #!/bin/sh
+
 echo docker run -it -v /cattle:/opt/cattle alpine:latest
+
 echo apk --update add git
+
 echo git clone https://github.com/aerth/bolt-skel /cattle/bolt-skel
+
 echo exit
+
 echo $0 boltskel 8080
+
 #### This README.md is a shell script 
+
 exit 1
+
 ```
 if [ -z "$1" ];then
 echo "$0 [cattle-name] [port]"
