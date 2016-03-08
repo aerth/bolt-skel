@@ -1,5 +1,6 @@
 #!/bin/sh
 
+if [ -z "$1" ];then
 echo docker run -it -v /cattle:/opt/cattle alpine:latest
 
 echo apk --update add git
@@ -10,12 +11,7 @@ echo exit
 
 echo $0 boltskel 8080
 
-#### This README.md is a shell script 
 
-exit 1
-
-```
-if [ -z "$1" ];then
 echo "$0 [cattle-name] [port]"
 exit 1
 fi
@@ -40,6 +36,3 @@ docker run -it -d -p $2:80 \
 
 echo Visit http://127.0.0.1:$2 (or http://$1)
 
-#
-```
-#
