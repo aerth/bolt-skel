@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ -z "$1" ];then
-echo docker run -it -v /cattle:/opt/cattle alpine:latest
+echo docker run -it -v /cattle:/opt/cattle alpine:latest sh
 
 echo apk --update add git
 
